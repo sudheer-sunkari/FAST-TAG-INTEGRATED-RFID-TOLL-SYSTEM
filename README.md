@@ -36,34 +36,8 @@ The system identifies vehicles using RFID cards, verifies the available balance,
 
 The system consists of multiple hardware modules connected to the **LPC2148 ARM7 microcontroller**.
 
-### 🧩 Main Components
+![Uploading Block_diagram.png…]()
 
-```text
-                 🚗 VEHICLE
-                     │
-                     ▼
-          📡 GP2D12 Distance Sensor
-                     │
-                     ▼
-             🧠 LPC2148 Controller
-              /       |        \
-             /        |         \
-            ▼         ▼          ▼
-      🏷️ RFID      💾 EEPROM    📟 LCD
-         Reader         │
-            │           │
-            └─────┬─────┘
-                  │
-                  ▼
-             💰 Toll Processing
-                  │
-                  ▼
-             🚧 DC Motor
-              Gate Control
-
-       ⌨️ Keypad ───────► LPC2148
-       🔘 Switches ─────► LPC2148
-```
 
 The **LPC2148 microcontroller** acts as the main controller and manages all the peripheral modules.
 
