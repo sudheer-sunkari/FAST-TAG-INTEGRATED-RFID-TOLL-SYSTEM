@@ -34,10 +34,9 @@ The system identifies vehicles using RFID cards, verifies the available balance,
 
 ## ⚙️ System Architecture
 
-The system consists of multiple hardware modules connected to the **LPC2148 ARM7 microcontroller**.
+The following block diagram illustrates the overall architecture of the **FAST-TAG Integrated RFID Toll System**.
 
-![Uploading Block_diagram.png…]()
-
+<img width="1189" height="896" alt="Block_diagram" src="https://github.com/user-attachments/assets/3f7fc4fe-60b0-46e2-8c32-3f3beb47db7d" />
 
 The **LPC2148 microcontroller** acts as the main controller and manages all the peripheral modules.
 
