@@ -457,58 +457,50 @@ GATE CLOSED
 
 ---
 
-## 📸 Project Images
+## 🧩 System Overview
 
-You can add your project photos here.
+The **FAST-TAG Integrated RFID Toll System** is designed to automate the toll collection process using RFID technology.
 
-### 🧩 Block Diagram
+The system works through the following flow:
 
 ```text
-![Block Diagram](images/block-diagram.png)
+🚗 Vehicle Approaches
+        │
+        ▼
+📡 GP2D12 Sensor Detects Vehicle
+        │
+        ▼
+📟 LCD: "Welcome to Toll Plaza"
+        │
+        ▼
+🏷️ RFID Card Scanned
+        │
+        ▼
+📡 RFID Data Received through UART
+        │
+        ▼
+🧠 LPC2148 Verifies Card
+        │
+        ▼
+💾 Retrieve Vehicle & Balance Details
+        │
+        ▼
+💰 Toll Amount Deducted
+        │
+        ▼
+🚧 DC Motor Opens Gate
+        │
+        ▼
+🚗 Vehicle Passes Through
+        │
+        ▼
+📡 Sensor Detects Vehicle Moving Away
+        │
+        ▼
+🚧 DC Motor Closes Gate
 ```
 
-### 🔌 Hardware Setup
-
-```text
-![Hardware Setup](images/hardware-setup.jpg)
-```
-
-### 🏷️ RFID Reader and Card
-
-```text
-![RFID Reader](images/rfid-reader.jpg)
-```
-
-### 📟 LCD Output
-
-```text
-![LCD Output](images/lcd-output.jpg)
-```
-
-### 🚧 Toll Gate Setup
-
-```text
-![Toll Gate](images/toll-gate.jpg)
-```
-
-> 📌 Create an `images` folder inside your GitHub project and place your project photos there.
-
-Example:
-
-```text
-FAST-TAG-INTEGRATED-RFID-TOLL-SYSTEM/
-│
-├── 📁 images/
-│   ├── block-diagram.png
-│   ├── hardware-setup.jpg
-│   ├── rfid-reader.jpg
-│   ├── lcd-output.jpg
-│   └── toll-gate.jpg
-│
-├── 📁 src/
-├── 📁 include/
-├── README.md
-└── LICENSE
+The project uses the **LPC2148 microcontroller** as the main controller. The RFID reader communicates with the controller through serial communication, while vehicle and balance information is stored in EEPROM. The system also supports manual recharge and manual toll deduction using switches and a keypad.
 ```
 
 ---
