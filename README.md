@@ -500,9 +500,6 @@ The system works through the following flow:
 🚧 DC Motor Closes Gate
 ```
 
-The project uses the **LPC2148 microcontroller** as the main controller. The RFID reader communicates with the controller through serial communication, while vehicle and balance information is stored in EEPROM. The system also supports manual recharge and manual toll deduction using switches and a keypad.
-```
-
 ---
 
 ## 🚀 Features
