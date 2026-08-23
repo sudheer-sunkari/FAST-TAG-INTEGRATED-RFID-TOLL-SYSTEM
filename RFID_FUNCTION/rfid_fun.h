@@ -1,0 +1,14 @@
+void card_campare(void);
+void init_fun(void);
+void process_sensor(void);
+void InitUART0 (void);
+void save_cards(void);
+void recharge_card(void);
+void enable_eint(void);
+void eint0_isr(void)__irq;
+void eint1_isr(void) __irq;
+void manual_deduct(void);
+void open_gate(void);
+void close_gate(void);
+void display(int,int);
+void display1(int,int);
